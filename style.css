@@ -1,0 +1,97 @@
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(227, 226, 226);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 600;
+    color: rgb(72, 70, 70);
+}
+.head{
+    width: 100%;
+    height:auto;
+    background: rgba(17, 0, 165, 0.635);
+    
+}
+#bill::placeholder{
+    color: black;
+    cursor: text;
+}
+.main{
+    width: 310px;
+    margin: auto;
+    height: 420px;
+    background: rgb(232, 232, 232);
+    border: none;
+    border-radius:8px;
+    box-shadow: 2.8px 2.8px 2.2px rgba(0,0,0,0.02),
+    6.7px 6.7px 5.3px rgba(0,0,0,0.028),
+    12.5px 12.5px 10px rgba(0,0,0,0.035),
+    22.3px 22.3px 17.9px rgba(0,0,0,0.042),
+    41.8px 41.8px 33.4px rgba(0,0,0,0.05),
+    100px 100px 80px rgba(0,0,0,0.07);
+    transform: translateY(230px);
+
+
+}
+.wrper{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding-top: 30px;
+}
+.billandTips{
+    border-bottom:1px solid rgba(152, 144, 221, 0.635);
+    padding-bottom:12px;
+}
+.bill{
+    display: flex;
+    justify-content: space-between;
+}
+.bill input{
+    background:rgba(86, 72, 208, 0.635);
+    outline: none;
+    border: none;
+    padding:3px;
+    text-align: right;
+    width: 100px;
+}
+.tips{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+.middle{
+    margin-top: 30px;
+}
+.ii{
+display: flex;
+justify-content: space-between;
+}
+#tipRange{
+    padding: 12px 0px 10px 0px;
+}
+#personeNO{
+    padding: 12px 0px 10px 0px;
+}
+.totalTips input{
+    width: 100%;
+}
+.result{
+    background:rgba(86, 72, 208, 0.635);
+    border-radius: 7px;
+    margin-top: 18px;
+    padding: 10px;
+    color: rgb(27, 27, 27);
+}
+.iii{
+    display: flex;
+    justify-content: space-between;
+}
+.totalPerParsone{
+    padding-top: 12px;
+}
