@@ -15,11 +15,11 @@ var totalperPersone=document.querySelector("#totalperPersone");
 //  validation of bill value
 function inputBillValidation(){
     bill.addEventListener("keyup",()=>{
-        var billValue=bill.value;
+        var billValue=bill.value=bill.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g,'$1');
         let min=parseInt(bill.getAttribute("min"));
         
         if(billValue < min ||isNaN(billValue) ){
-            alert("Please Enter valied something.");
+            console.log("please Enter valied something.");
         }else{
             // call the calculated function
             calculated(billValue);
