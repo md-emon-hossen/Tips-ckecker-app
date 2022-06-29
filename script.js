@@ -39,7 +39,7 @@ tipsRange.addEventListener('input',(e)=>{
 
     //calculate the all value
      calculated=(vl)=>{
-        var mainVl=vl;
+        var mainVl=parseFloat(vl);
         var mainRangeVl=rangeVle;
         var mainTips=(mainVl*mainRangeVl)/100;
         tips.textContent="$ "+mainTips;
@@ -47,7 +47,7 @@ tipsRange.addEventListener('input',(e)=>{
         total.textContent="$ "+totalVl;
     
         //call the totalCalculation here
-        totalCalculation(mainTips,totalVl);
+        totalCalculation(totalVl,mainTips);
 
     }
 
@@ -59,13 +59,35 @@ peapleRange.addEventListener('input',(e)=>{
     //value assign and display
     var peopleno=peapleRange.value;
     peapleNo.textContent=peopleno;
-    
+   
     // calculate the total value
     totalCalculation=(frist,sec)=>{
-        var tipsPerParson=frist/peopleno;
-        totalTipsPersone.textContent="$ "+tipsPerParson;
-        var totalperprsn=sec/peopleno;
-        totalperPersone.textContent="$ "+totalperprsn;
+        var i =parseFloat(frist) ;
+        var ii=parseFloat(sec);
+        var pNumber=parseFloat(peopleno);
+        // var outputi=pNumber/ii;
+        // totalTipsPersone.textContent="$ "+outputi;
+        // var outputii=pNumber/i;
+        // totalperPersone.textContent="$ "+outputii;
+
+        // total tips per persone
+        if(pNumber === 1 ){
+            totalTipsPersone.textContent="$"+ ii;
+        }else{
+            var outputi = ii / pNumber;
+            totalTipsPersone.textContent="$ "+outputi;
+        }
+
+        // total per persone
+        if( pNumber === 0 ){
+            totalperPersone.textContent="$"+i;
+        }else if( pNumber === 1){
+            totalperPersone.textContent="$"+i;
+        }else{
+            var outputii=i/pNumber;
+            totalperPersone.textContent="$"+outputii;
+        }
+       
     }
     
 }); 
